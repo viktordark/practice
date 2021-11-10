@@ -6,20 +6,9 @@
     <title>Students</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://unpkg.com/vue"></script>
-	<script src="students.js" defer></script>
-</head>
+  </head>
 <body>
-    <div id="app">
-    <p>Поиск <input v-model="search"></p><br>
-		<table class="table table-dark">
-			<tr v-for="item in students"  v-bind:key="item.id"> 
-				<td v-bind:style="item.name.indexOf(search)>-1 && search.length >0 ? 'background-color:#FFFF00'  : 'background-color:#000'"> {{item.name}} </td>
-        <td><input type="checkbox" v-model="item.isDonePr"></td>
-        <td>{{item.group}}</td>
-        <td><a href = "#" @click="deleteStudent(item.id)">Видалити</a></td>
-			</tr>
-		</table>
-	</div>
+    <div id="app"></div>
+    <script src="./main.js"></script>
 </body>
-<script src="main.js"></script>
 </html>
